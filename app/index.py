@@ -45,29 +45,6 @@ def process_logout_user():
     return redirect("/login")
 
 
-# @app.route('/register', methods=['get', 'post'])
-# def register_user():
-#     err_msg = ""
-#     if request.method.__eq__('POST'):
-#         password = request.form.get('password')
-#         confirm = request.form.get('confirm')
-#
-#         if password.__eq__(confirm):
-#             try:
-#                 dao.add_user(name=request.form.get('name'),
-#                              username=request.form.get('username'),
-#                              password=password,
-#                              avatar=request.files.get('avatar'))
-#             except:
-#                 err_msg = 'Hệ thống đang bị lỗi!'
-#             else:
-#                 return redirect('/login')
-#         else:
-#             err_msg = 'Mật khẩu KHÔNG khớp!'
-#
-#     return render_template('register.html', err_msg=err_msg)
-
-
 @app.route('/admin/login', methods=['post'])
 def login_admin_process():
     username = request.form.get('username')

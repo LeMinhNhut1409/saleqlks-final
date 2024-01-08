@@ -29,8 +29,9 @@ class AuthenticatedAdmin(ModelView):
 
 class MyProductView(AuthenticatedAdmin):
     column_display_pk = True
-    column_list = ['maPhong', 'tenPhong', 'giaPhong', 'dienTich', 'loaiPhong']
+    column_list = ['tenPhong', 'giaPhong', 'dienTich', 'loaiphong']
     column_searchable_list = ['tenPhong']
+    column_filters = ['giaPhong', 'tenPhong', 'dienTich']
     can_export = True
     can_view_details = True
 
